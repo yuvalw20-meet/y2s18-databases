@@ -103,7 +103,7 @@ below `threshold`. Are there other functions that you've implemented that could 
 Add additional functionality to your database. This can include, but is not limited to:
 - Adding a new query function, which returns the top-5 highest rated articles in the DB.
 - A new function to update the rating of a DB, which takes the average of the original rating
-and the updated rating.
+and the new rating.
 - Editing your database model, to add a new column, which keeps track of the number of times
 an article has been queried. When should this column be updated?  
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
