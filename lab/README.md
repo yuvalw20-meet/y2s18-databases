@@ -57,4 +57,4 @@ Unfortunately, this article does not have a better rating. Maybe, this is an art
 replaced soon!.
 ```
 
-### Part 2: 
+### Part 2: Adding to your Database

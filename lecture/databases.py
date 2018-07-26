@@ -8,19 +8,6 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-class Student():
-
-	def __init__(self, name, year):
-		"""
-		Initiates a student object with a
-		string name, an integer representing
-		their year, and a default value of False
-		for their lab status.
-		"""
-		self.name = name
-		self.year = year
-		self.finished_lab = False 
-
 def add_student(name, year, finished_lab):
 	"""
 	Add a student to the database, given
@@ -42,6 +29,16 @@ def query_by_name(name):
 	student = session.query(Student).filter_by(
 		name=name).first()
 	return student
+
+def query_all():
+	"""
+	Print all the students in the database.
+	"""
+	students = session.query(Student).all()
+	for student in students:
+		print(student)
+		print('\n')
+	return students
 
 def delete_student(name):
 	"""
