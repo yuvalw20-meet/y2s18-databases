@@ -1,4 +1,4 @@
-from model import Base, Student
+from knowledge_model import Base, Knowledge
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -8,16 +8,20 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-class Article():
+def add_article():
+	pass
 
-	"""
-	Design and comment functions to
-	-create an article object
-	-add an article to the DB
-	-Remove an article from the DB
-	-Edit an article, to update its
-	rating
+def query_all_articles():
+	pass
 
-	Article objects should have the structure
-	defined in knowledge_model.py
-	"""
+def query_article_by_topic():
+	pass
+
+def delete_article_by_topic():
+	pass
+
+def delete_all_articles():
+	pass
+
+def edit_article_rating():
+	pass

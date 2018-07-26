@@ -34,7 +34,7 @@ much you liked them and what you've learned.
 
 4. Now, after doing this, you have enough information to create a database of
 the knowledge you've learned so far. The database should have:
-- A primary key (what would this be for the set of articles?)
+- A primary key (what would this be for the set of articles?). You can 
 - The topic of the article (what did your friends want to learn about?)
 - The title of the relevant article that you've chosen. This can be the same
 as the topic of the article, but it does not have to be!
@@ -57,4 +57,55 @@ Unfortunately, this article does not have a better rating. Maybe, this is an art
 replaced soon!.
 ```
 
-### Part 2: Adding to your Database
+6. Bonus: Add printing of the primary key to the `__repr__` function in `knowledge_model.py` so that
+we can see what the primary keys of the articles in the DB are!
+
+### Part 2: Adding and Querying from your Database
+
+In this part, you will only need to edit `knowledge_databases.py`. 
+
+1. Now, we'd like to add the articles that you've already read and rated to your database. To do
+this, write a function `add_article` in `knowledge_databases.py`, to add a new article to
+your database. What inputs does this function need? Make sure that you can run this function
+and add an article to your Knowledge database.
+
+2. Write a function `query_all_articles()` to print all the articles in your database. For each article,
+this should print the statement described in Part 1.5 (or 1.6, if you did the bonus!).
+
+3. Now, you'd like to look up an article by its topic. Write a function `query_article_by_topic()` to
+retrieve all the articles in a specific topic. 
+
+4. Bonus: Sometimes, you want to find all articles, which have low ratings. Add a function
+`query_article_by_rating()`, which takes an input parameter, `threshold`, and returns all articles
+which have a rating that is lower than `threshold`.
+Note that there is no stub for this function - you'll need to create it yourself.
+
+5. Bonus: Sometimes, you want to find a specific article. Since the only unique property that 
+each article is guaranteed to have is a primary key, add a function `query_article_by_primary_key()`,
+which returns the article with the correct primary key.
+
+
+### Part 3: Editing and Deleting from your Database
+
+1. Write a function `delete_article_by_topic()`, which removes all articles in a certain topic
+from the database. Test this function out to remove all articles from a topic that's in your DB.
+
+2. Write a function `delete_all_articles()`, which removes all the articles from your database!
+
+3. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_name`. This function should update all articles with the given name to have a rating of `updated_rating`.
+
+4. Bonus: Now, you'd like to improve the quality of your database. So, you decide to write a function
+which removes all articles from your database if their rating is too low. Write a function `delete_article_by_rating()`, which takes an input threshold, and removes all articles that have a rating
+below `threshold`. Are there other functions that you've implemented that could be useful here?
+
+### Part 4: Bonus!
+
+Add additional functionality to your database. This can include, but is not limited to:
+- Adding a new query function, which returns the top-5 highest rated articles in the DB.
+- A new function to update the rating of a DB, which takes the average of the original rating
+and the updated rating.
+- Editing your database model, to add a new column, which keeps track of the number of times
+an article has been queried. When should this column be updated?  
+*Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
+deleting the file knowledge.db, which stores the schema of the old database, which has now
+been changed. This file should be in the lab folder, which you are working in.*

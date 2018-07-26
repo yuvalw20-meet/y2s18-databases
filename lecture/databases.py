@@ -58,3 +58,6 @@ def update_lab_status(name, finished_lab):
 		name=name).first()
 	student_object.finished_lab = finished_lab
 	session.commit()
+
+add_student("mayuri", 2, False)
+query_all()
