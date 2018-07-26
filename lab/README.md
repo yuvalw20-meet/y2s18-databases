@@ -45,12 +45,16 @@ which stores this information.
 5. Add a `__repr__` function to your table. That is, when you want to print an instance
 of the Knowledge class, which has primary key 1, a topic of weather, a title of rainbow,
 and a rating of 9, the following should be printed:
-```If you want to learn about weather, you should look at the Wikipedia article called rainbow.
-We gave this article a rating of 9 out of 10!```
+```
+If you want to learn about weather, you should look at the Wikipedia article called rainbow.
+We gave this article a rating of 9 out of 10!
+```
 
 6. Bonus: If the article is rated lower than 7 out of 10, add the following message, when printing
 the instance.
-```Unfortunately, this article does not have a better rating. Maybe, this is an article that should be
-replaced soon!.```
+```
+Unfortunately, this article does not have a better rating. Maybe, this is an article that should be
+replaced soon!.
+```
 
 ### Part 2: 
