@@ -1,8 +1,8 @@
 # Databases Examples and Exercises!
 
-### Setup
+## Setup
 
-1. Before you start coding, make sure you fork the repository for this lab. Then, run the following commands:
+Before you start coding, make sure you fork the repository for this lab. Then, run the following commands:
 ```
 cd ~/Desktop
 git clone https://github.com/<YOUR USERNAME>/y2s18-databases
