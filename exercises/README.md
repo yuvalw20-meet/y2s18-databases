@@ -4,17 +4,7 @@ Welcome to the databases lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
-### Part 0: Setup
-
-1. Before you start coding, make sure you fork the repository for this lab. Then,
-```
-cd ~/Desktop
-git clone https://github.com/<YOUR USERNAME>/y2s18-databases
-cd y2s18-databases
-subl exercises &
-```
-
-2. In this lab, we will create our own database. The only files that you will
+In this lab, we will create our own database. The only files that you will
 need to modify are `knowledge_model.py` and `knowledge_databases.py`.
 
 ### Part 1: Creating a Database Model
