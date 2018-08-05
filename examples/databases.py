@@ -70,15 +70,15 @@ session = DBSession()
 
 # Example 6: Update attribute of student
 # in the table
-def update_lab_status(name, finished_lab):
-	"""
-	Update a student in the database, with 
-	whether or not they have finished the lab
-	"""
-	student_object = session.query(
-		Student).filter_by(
-		name=name).first()
-	student_object.finished_lab = finished_lab
-	session.commit()
-update_lab_status("Emily", True)
-query_all()
+# def update_lab_status(name, finished_lab):
+# 	"""
+# 	Update a student in the database, with 
+# 	whether or not they have finished the lab
+# 	"""
+# 	student_object = session.query(
+# 		Student).filter_by(
+# 		name=name).first()
+# 	student_object.finished_lab = finished_lab
+# 	session.commit()
+# update_lab_status("Emily", True)
+# query_all()
