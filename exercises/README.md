@@ -6,12 +6,12 @@ get stuck. Good luck, and have fun!
 
 ### Part 0: Setup
 
-1. Before you start coding, make sure you clone the repository for this lab:
+1. Before you start coding, make sure you fork the repository for this lab. Then,
 ```
 cd ~/Desktop
-https://github.com/meet-projects/y2s18-databases
+git clone https://github.com/<YOUR USERNAME>/y2s18-databases
 cd y2s18-databases
-subl lab &
+subl exercises &
 ```
 
 2. In this lab, we will create our own database. The only files that you will
