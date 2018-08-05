@@ -9,7 +9,7 @@ need to modify are `knowledge_model.py` and `knowledge_databases.py`.
 
 ### Part 1: Creating a Database Model
 
-1. That is, after realizing just
+1. After realizing just
 how easy it is to organize information, you decide to create a website to 
 organize all the information in the world. To start off, you'd like to understand
 what kind of topics people are interested in. Survey at least three people
@@ -57,10 +57,9 @@ In this part and all the next ones, you will only need to edit `knowledge_databa
 
 1. Now, we'd like to add the articles that you've already read and rated to your database. To do
 this, write a function `add_article` in `knowledge_databases.py`, to add a new article to
-your database. What inputs does this function need? Make sure that you can run this function
-and add an article to your Knowledge database.
+your database. What inputs does this function need?
 
-2. Run your function at least once, so that your database will contain at least one article.
+2. Make sure to run your function at least once, so that your database will contain at least one article.
 
 ### Part 3: Querying your database.
 
@@ -74,12 +73,10 @@ retrieve all the articles in a specific topic.
 3. Bonus: Sometimes, you want to find all articles, which have low ratings. Add a function
 `query_article_by_rating()`, which takes an input parameter, `threshold`, and returns all articles
 which have a rating that is lower than `threshold`.
-Note that there is no stub for this function - you'll need to create it yourself.
 
 4. Bonus: Sometimes, you want to find a specific article. Since the only unique property that 
 each article is guaranteed to have is a primary key, add a function `query_article_by_primary_key()`,
 which returns the article with the correct primary key.
-
 
 ### Part 4: Deleting from your Database
 
@@ -101,7 +98,8 @@ below `threshold`. Are there other functions that you've implemented that could 
 Add additional functionality to your database. This can include, but is not limited to:
 - Adding a new query function, which returns the top-5 highest rated articles in the DB.
 - A new function to update the rating of a DB, which takes the average of the original rating
-and the new rating.
+and the new rating. What data type should this column have? You might need to update the `import`
+statements to get this working correctly.
 - Editing your database model, to add a new column, which keeps track of the number of times
 an article has been queried. When should this column be updated?  
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
