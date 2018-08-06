@@ -41,8 +41,8 @@ If you want to learn about weather, you should look at the Wikipedia article cal
 We gave this article a rating of 9 out of 10!
 ```
 
-6. Bonus: If the article is rated lower than 7 out of 10, add the following message, when printing
-the instance.
+6. Bonus: If the article is rated lower than 7 out of 10, add the following message, after
+the message above, when printing the object.
 ```
 Unfortunately, this article does not have a better rating. Maybe, this is an article that should be
 replaced soon!.
