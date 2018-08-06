@@ -87,7 +87,7 @@ from the database. Test this function out to remove all articles from a topic th
 
 ### Part 5: Editing in your Database
 
-1. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_name`. This function should update all articles with the given name to have a rating of `updated_rating`.
+1. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_title`. This function should update all articles with the given title to have a rating of `updated_rating`.
 
 2. Bonus: Now, you'd like to improve the quality of your database. So, you decide to write a function
 which removes all articles from your database if their rating is too low. Write a function `delete_article_by_rating()`, which takes an input threshold, and removes all articles that have a rating
