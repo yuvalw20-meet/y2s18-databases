@@ -26,16 +26,23 @@ class Student(Base):
 
 	def __repr__(self):
 		return ("Student Name: {}\n"
-				"Student Year: {} \n"
-				"Has Finished Lab: {}").format(
+				"Student Year: {}\n"
+				"Has Finished Lab: {}\n"
+				"ID: {}").format(
 					self.name,
 					self.year,
-					self.finished_lab)
+					self.finished_lab,
+					self.student_id)
 
 # Example 1: Show table schema
 # print(repr(Student.__table__))
 
 # Example 2: Create a student object
 # x = Student(name="Mayuri", year=2)
+# print(x)
+
+# Example 3: Another way to create Student object
+# x = Student()
+# x.name = "Mayuri"
 # print(x)
 
