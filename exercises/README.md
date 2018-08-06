@@ -101,7 +101,9 @@ Add additional functionality to your database. This can include, but is not limi
 and the new rating. What data type should this column have? You might need to edit `knowledge_model.py`
 and add some additional imports to get this working correctly.
 - Editing your database model, to add a new column, which keeps track of the number of times
-an article has been queried. When should this column be updated?  
+an article has been queried. Then, edit `knowledge_model.py` to
+give this column a default value of 0, when adding a new article to the DB.
+When should this column be updated? 
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
 deleting the file knowledge.db, which stores the schema of the old database, which has now
 been changed. This file should be in the exercises folder, which you are working in.*
