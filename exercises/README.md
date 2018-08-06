@@ -104,4 +104,4 @@ and add some additional imports to get this working correctly.
 an article has been queried. When should this column be updated?  
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
 deleting the file knowledge.db, which stores the schema of the old database, which has now
-been changed. This file should be in the lab folder, which you are working in.*
+been changed. This file should be in the exercises folder, which you are working in.*
