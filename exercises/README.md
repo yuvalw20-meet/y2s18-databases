@@ -41,8 +41,8 @@ If you want to learn about weather, you should look at the Wikipedia article cal
 We gave this article a rating of 9 out of 10!
 ```
 
-6. Bonus: If the article is rated lower than 7 out of 10, add the following message, when printing
-the instance.
+6. Bonus: If the article is rated lower than 7 out of 10, add the following message, after
+the message above, when printing the object.
 ```
 Unfortunately, this article does not have a better rating. Maybe, this is an article that should be
 replaced soon!.
@@ -87,7 +87,7 @@ from the database. Test this function out to remove all articles from a topic th
 
 ### Part 5: Editing in your Database
 
-1. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_name`. This function should update all articles with the given name to have a rating of `updated_rating`.
+1. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_title`. This function should update all articles with the given title to have a rating of `updated_rating`.
 
 2. Bonus: Now, you'd like to improve the quality of your database. So, you decide to write a function
 which removes all articles from your database if their rating is too low. Write a function `delete_article_by_rating()`, which takes an input threshold, and removes all articles that have a rating
@@ -98,10 +98,12 @@ below `threshold`. Are there other functions that you've implemented that could 
 Add additional functionality to your database. This can include, but is not limited to:
 - Adding a new query function, which returns the top-5 highest rated articles in the DB.
 - A new function to update the rating of a DB, which takes the average of the original rating
-and the new rating. What data type should this column have? You might need to update the `import`
-statements to get this working correctly.
+and the new rating. What data type should this column have? You might need to edit `knowledge_model.py`
+and add some additional imports to get this working correctly.
 - Editing your database model, to add a new column, which keeps track of the number of times
-an article has been queried. When should this column be updated?  
+an article has been queried. Then, edit `knowledge_model.py` to
+give this column a default value of 0, when adding a new article to the DB.
+When should this column be updated? 
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
 deleting the file knowledge.db, which stores the schema of the old database, which has now
-been changed. This file should be in the lab folder, which you are working in.*
+been changed. This file should be in the exercises folder, which you are working in.*
