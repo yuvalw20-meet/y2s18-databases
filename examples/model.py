@@ -33,9 +33,9 @@ class Student(Base):
 					self.finished_lab)
 
 # Example 1: Show table schema
-print(repr(Student.__table__))
+# print(repr(Student.__table__))
 
 # Example 2: Create a student object
-x = Student(name="Mayuri", year=2)
-print(x)
+# x = Student(name="Mayuri", year=2)
+# print(x)
 
