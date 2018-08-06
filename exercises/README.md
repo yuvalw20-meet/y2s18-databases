@@ -4,22 +4,12 @@ Welcome to the databases lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
-### Part 0: Setup
-
-1. Before you start coding, make sure you clone the repository for this lab:
-```
-cd ~/Desktop
-https://github.com/meet-projects/y2s18-databases
-cd y2s18-databases
-subl lab &
-```
-
-2. In this lab, we will create our own database. The only files that you will
+In this lab, we will create our own database. The only files that you will
 need to modify are `knowledge_model.py` and `knowledge_databases.py`.
 
 ### Part 1: Creating a Database Model
 
-1. That is, after realizing just
+1. After realizing just
 how easy it is to organize information, you decide to create a website to 
 organize all the information in the world. To start off, you'd like to understand
 what kind of topics people are interested in. Survey at least three people
@@ -34,7 +24,8 @@ much you liked them and what you've learned.
 
 4. Now, after doing this, you have enough information to create a database of
 the knowledge you've learned so far. The database should have:
-- A primary key (what would this be for the set of articles?). You can 
+- A primary key (what would this be for the set of articles?). Choose an attribute
+appropriately.
 - The topic of the article (what did your friends want to learn about?)
 - The title of the relevant article that you've chosen. This can be the same
 as the topic of the article, but it does not have to be!
@@ -60,50 +51,55 @@ replaced soon!.
 6. Bonus: Add printing of the primary key to the `__repr__` function in `knowledge_model.py` so that
 we can see what the primary keys of the articles in the DB are!
 
-### Part 2: Adding and Querying from your Database
+### Part 2: Adding to your Database
 
-In this part, you will only need to edit `knowledge_databases.py`. 
+In this part and all the next ones, you will only need to edit `knowledge_databases.py`. 
 
 1. Now, we'd like to add the articles that you've already read and rated to your database. To do
 this, write a function `add_article` in `knowledge_databases.py`, to add a new article to
-your database. What inputs does this function need? Make sure that you can run this function
-and add an article to your Knowledge database.
+your database. What inputs does this function need?
 
-2. Write a function `query_all_articles()` to print all the articles in your database. For each article,
-this should print the statement described in Part 1.5 (or 1.6, if you did the bonus!).
+2. Make sure to run your function at least once, so that your database will contain at least one article.
 
-3. Now, you'd like to look up an article by its topic. Write a function `query_article_by_topic()` to
+### Part 3: Querying your database.
+
+1. Write a function `query_all_articles()` to print all the articles in your database. For each article,
+this should print the statement described in Part 1.5 (or 1.6, if you did the bonus!). When you run this
+function, you should see all the articles that you have previously added to the DB!
+
+2. Now, you'd like to look up an article by its topic. Write a function `query_article_by_topic()` to
 retrieve all the articles in a specific topic. 
 
-4. Bonus: Sometimes, you want to find all articles, which have low ratings. Add a function
+3. Bonus: Sometimes, you want to find all articles, which have low ratings. Add a function
 `query_article_by_rating()`, which takes an input parameter, `threshold`, and returns all articles
 which have a rating that is lower than `threshold`.
-Note that there is no stub for this function - you'll need to create it yourself.
 
-5. Bonus: Sometimes, you want to find a specific article. Since the only unique property that 
+4. Bonus: Sometimes, you want to find a specific article. Since the only unique property that 
 each article is guaranteed to have is a primary key, add a function `query_article_by_primary_key()`,
 which returns the article with the correct primary key.
 
-
-### Part 3: Editing and Deleting from your Database
+### Part 4: Deleting from your Database
 
 1. Write a function `delete_article_by_topic()`, which removes all articles in a certain topic
 from the database. Test this function out to remove all articles from a topic that's in your DB.
 
 2. Write a function `delete_all_articles()`, which removes all the articles from your database!
 
-3. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_name`. This function should update all articles with the given name to have a rating of `updated_rating`.
+### Part 5: Editing in your Database
 
-4. Bonus: Now, you'd like to improve the quality of your database. So, you decide to write a function
+1. Write a function `edit_rating()`, which takes in input parameters `updated_rating` and `article_name`. This function should update all articles with the given name to have a rating of `updated_rating`.
+
+2. Bonus: Now, you'd like to improve the quality of your database. So, you decide to write a function
 which removes all articles from your database if their rating is too low. Write a function `delete_article_by_rating()`, which takes an input threshold, and removes all articles that have a rating
 below `threshold`. Are there other functions that you've implemented that could be useful here?
 
-### Part 4: Bonus!
+### Part 6: Bonus!
 
 Add additional functionality to your database. This can include, but is not limited to:
 - Adding a new query function, which returns the top-5 highest rated articles in the DB.
 - A new function to update the rating of a DB, which takes the average of the original rating
-and the new rating.
+and the new rating. What data type should this column have? You might need to update the `import`
+statements to get this working correctly.
 - Editing your database model, to add a new column, which keeps track of the number of times
 an article has been queried. When should this column be updated?  
 *Note: If you're doing this, you might get some SQLAlchemy issues. You can resolve this by
